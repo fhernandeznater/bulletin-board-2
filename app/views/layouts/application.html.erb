@@ -14,10 +14,9 @@
     <nav>
       <a href="/">Bulletin Board</a>
 
-      <% if #check cookie to see if nil or if there is a user_id %>
+      <% if current_user != nil %>
         <a href="/users/sign_out">Sign out</a>
         <a href="/users/edit">Edit profile</a>
-
       <% else %>
         <a href="/users/sign_up">Sign up</a>
         <a href="/users/sign_in">Sign in</a>
